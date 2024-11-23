@@ -1,0 +1,178 @@
+/* Projects Css */
+.project {
+    padding: 80px 0;
+    position: relative;
+    background-color: black;
+  }
+  .project h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .project p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%;
+  }
+  
+  .project .nav.nav-pills {
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .project .nav.nav-pills .nav-item {
+    width: 33.33333%;
+  }
+  
+  .project .nav.nav-pills .nav-link {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 17px 0;
+    color: #fff;
+    width: 100%;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    z-index: 0;
+  }
+  
+  .project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #333 -5.91%, #876dff 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+  }
+  
+  .project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  
+  /* Penyesuaian border untuk masing-masing tab */
+  .nav-link#projects-tabs-tab-first {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 55px 0px 0px 55px;
+  }
+  
+  .nav-link#projects-tabs-tab-second {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 55px 55px 0;
+  }
+  
+
+  /* Project Card Styles */
+  .proj-imgbx {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .proj-imgbx img {
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .proj-imgbx:hover img {
+    filter: blur(5px); /* Menambahkan efek blur pada gambar */
+    transform: scale(1.1); /* Membesarkan gambar sedikit */
+  }
+  
+  .proj-txtx {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    visibility: hidden; /* Menyembunyikan deskripsi awal */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .proj-imgbx:hover .proj-txtx {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .proj-txtx h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .proj-txtx p {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+  .proj-imgbx:hover .proj-txtx h4,
+  .proj-imgbx:hover .proj-txtx p {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  
+
+/* Background Image Style */
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+  
+  /* Animations */
+.animate-fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation-fill-mode: forwards; /* Memastikan status akhir dipertahankan */
+  }
+  
+  .animate-slideInUp {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation-fill-mode: forwards; /* Memastikan status akhir dipertahankan */
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  

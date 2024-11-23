@@ -1,0 +1,432 @@
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: white;
+  font-weight: bold;
+}
+
+p.danger {
+	color: red;
+}
+
+/*Navbar Css*/
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition:  0.32s ease-in-out;
+}
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+}
+nav.navbar a.navbar-brand {
+    width: 9%;
+}
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1;
+}
+span.navbar-text {
+    display: flex;
+    align-items: center;
+}
+.social-icon {
+  display: inline-block;
+  margin-left: 14px;
+}
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative; /* Tambahkan untuk efek hover */
+  overflow: hidden; /* Agar elemen ::before tetap dalam lingkaran */
+}
+.social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+  z-index: 0; /* Pastikan berada di bawah ikon */
+}
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+.social-icon a i {
+  font-size: 20px; /* Ukuran ikon */
+  color: rgba(255, 255, 255, 0.8); /* Warna default */
+  z-index: 1; /* Pastikan ikon berada di atas elemen ::before */
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover i {
+  color: #000; /* Warna ikon saat hover */
+}
+/* Styles for the Download CV Button */
+.navbar-text a {
+  text-decoration: none;
+}
+
+.navbar-text a .vvd {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.navbar-text a .vvd span {
+  z-index: 1;
+  position: relative;
+}
+
+.navbar-text a .vvd::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.navbar-text a .vvd:hover {
+  color: #121212;
+}
+
+.navbar-text a .vvd:hover::before {
+  width: 100%;
+}
+
+.navbar-text a .vvd:focus {
+  outline: none;
+}
+
+/* Adjusting the hover effect for better appearance */
+.navbar-text a .vvd:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* Banner Css */
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('./assets/img/banner.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner p {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner button:hover svg {
+  margin-left: 25px;
+}
+.banner img {
+  animation: updown 3s linear infinite;
+  border-radius: 50%;
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+/* Section Styling */
+.about-me-section {
+  background-color: #343a40; /* Warna gelap untuk background */
+  padding: 3rem 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Heading Styling */
+.about-me-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.about-me-section h2 span.text-warning {
+  color: #876dff; 
+}
+
+/* Personal Info Styling */
+.about-me-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.about-me-section ul li {
+  margin-bottom: 0.5rem;
+  color: #ffff; /* Warna abu-abu terang */
+}
+
+.about-me-section ul li strong {
+  color: #ffe730;; 
+}
+
+/* Fun Facts Cards */
+.about-me-section .bg-secondary {
+  background-color: #ffff !important; /* Warna abu-abu sekunder */
+}
+
+.about-me-section .bg-opacity-25 {
+  background-color: rgba(108, 117, 125, 0.25) !important; /* Transparansi */
+}
+
+.about-me-section .p-3 {
+  padding: 1rem !important;
+}
+
+.about-me-section h3.text-warning {
+  font-size: 1.75rem;
+}
+
+.about-me-section p.small {
+  font-size: 0.9rem;
+  color: #ffff; /* Warna abu-abu terang untuk deskripsi */
+}
+
+/* Animations */
+.about-me-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-me-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skills Section */
+.skill {
+  padding: 60px 0;
+  background-color: #1a1a1a; /* Dark background for the skills section */
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-bx {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.skill-bx.animate-fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-bx h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skill-bx p {
+  font-size: 1em;
+  color: #b3b3b3; /* Lighter grey for the description text */
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.skill-item.animate-slideInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+.skill-item img {
+  width: 120px; /* Adjust the size of the skill images */
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+.skill-item h5 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+/* Background decorative image */
+.background-image-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1; /* Slight opacity for a subtle background effect */
+  z-index: -1;
+}
+
+/* Footer Css */
+.footer {
+  padding: 0 0 50px 0;
+  background-image: url('./assets/img/footer-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+}
+
+.footer img {
+  width: 26%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+
+
+
